@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "prettier/prettier": ["error", {
+      // Facebook style
+      "singleQuote": true,
+      "trailingComma": "all",
+      "bracketSpacing": false,
+      "jsxBracketSameLine": true,
+      "parser": "flow",
+
+      "printWidth": 120,
+      "semi": false
+    }]
+  }
+}
