@@ -8,5 +8,5 @@ const myProps = {
   myPropsName1: 'myPropsValue1',
   myPropsName2: 'myPropsValue2',
 }
-ReactDOM.render(<App {...myProps} />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 registerServiceWorker()
