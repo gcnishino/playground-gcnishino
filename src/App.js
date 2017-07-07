@@ -6,19 +6,24 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      myState: 1,
+      myText: null,
     }
-    setInterval(() => {
-      this.setState({
-        myState: this.state.myState + 1,
-      })
-    }, 1000)
+    this.setMyText = this.setMyText.bind(this)
+  }
+
+  setMyText() {
+    this.setState({myText: this.refs.myText.value})
+    this.refs.myText.value = ''
   }
 
   render() {
     return (
       <div className="App">
-        myState: {this.state.myState}
+        <p>
+          入力値:{this.state.myText}
+        </p>
+        <input type="text" ref="myText" />
+        <input type="button" value="入力" onClick={this.setMyText} />
       </div>
     )
   }
